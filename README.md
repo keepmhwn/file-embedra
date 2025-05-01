@@ -46,3 +46,7 @@ const embeddings = await embed({
     - `text-embedding-ada-002` (default)
     - `text-embedding-3-large`
     - `text-embedding-3-small`
+
+## LICENSE
+
+[MIT License](https://github.com/keepmhwn/file-embedra/blob/main/LICENSE)

@@ -1,7 +1,7 @@
 {
   "name": "file-embedra",
-  "version": "0.0.5-beta",
-  "description": "",
+  "version": "1.0.0",
+  "description": "It is a library that helps with parsing, chunking, and embedding for Retrieval-Augmented Generation (RAG).",
   "type": "module",
   "main": "./dist/index.js",
   "types": "dist/index.d.ts",
