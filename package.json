@@ -1,15 +1,41 @@
 {
   "name": "file-embedra",
-  "version": "1.0.0",
+  "version": "0.0.5-beta",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "dist/index.d.ts",
+  "keywords": [
+    "embedding",
+    "RAG"
+  ],
+  "author": {
+    "name": "minhwan(keepmhwn)",
+    "email": "keepmhwn@gmail.com"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/keepmhwn/file-embedra"
+  },
+  "license": "MIT",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "vite build",
+    "prebuild": "rm -rf dist"
+  },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.3",
     "@types/node": "^22.15.3",
     "@typescript-eslint/eslint-plugin": "^8.31.1",
     "@typescript-eslint/parser": "^8.31.1",
@@ -20,5 +46,12 @@
     "typescript": "^5.8.3",
     "vite": "^6.3.4",
     "vite-plugin-dts": "^4.5.3"
+  },
+  "peerDependencies": {
+    "openai": "^4.96.2"
+  },
+  "dependencies": {
+    "gpt-tokenizer": "^2.9.0",
+    "remove-markdown": "^0.6.0"
   }
 }
